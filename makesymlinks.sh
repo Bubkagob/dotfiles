@@ -5,7 +5,7 @@ files="bashrc vimrc tmux.conf"
 
 
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
-mkdir -p $oldiir
+mkdir -p $olddir
 echo "done"
 
 
