@@ -1,4 +1,5 @@
 map <C-n> :NERDTreeToggle<CR>
+set shell=/bin/bash
 set expandtab 
 set tabstop=4
 set softtabstop=4
