@@ -1,6 +1,3 @@
-map <C-n> :NERDTreeToggle<CR>
-set shell=/bin/bash
-set expandtab 
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -119,7 +116,7 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 "Other
 let g:pymode_folding = 0
 let g:pymode_run = 0
-
+let g:pymode_python = 'python3'
 " =============
 " JEDI
 " =============
