@@ -79,7 +79,8 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'mitsuhiko/vim-python-combined'
 
-
+"Go
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
