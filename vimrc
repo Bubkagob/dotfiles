@@ -79,6 +79,9 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'mitsuhiko/vim-python-combined'
 
+"Cmake
+Plugin 'pboettch/vim-cmake-syntax'
+
 "Go
 Plugin 'fatih/vim-go'
 
