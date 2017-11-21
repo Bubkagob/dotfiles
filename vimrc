@@ -1,3 +1,5 @@
+map <C-n> :NERDTreeToggle<CR>
+set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -42,8 +44,6 @@ augroup END
 
 
 
-""""""""""""""""""""""""""COLOR
-colorscheme seoul256
 
 """"""""""""""""""""""""""FONT
 
@@ -87,6 +87,10 @@ Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
+
+""""""""""""""""""""""""""COLOR
+colorscheme seoul256
+
 
 "VIM-airline
 let g:airline_theme='badwolf'
