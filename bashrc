@@ -16,21 +16,13 @@ shopt -s cdspell
 shopt -s checkjobs
 shopt -s dirspell
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-
 alias ls='ls --color=auto'
-#PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
-#
-# ~/.bashrc
-#
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+PS1='\[\e[1;32m\][\W]\$ \[\e[m\]'
 
-PS1='\e[1;34m\W \e[1;32m%\e[0m '
-#PS1='\[\e[0m\]┌─[ \d ] :: [\u] - [\h] :: [\W]\n└─\[\e[1;32m\]>>\[\e[0m\] '
 # Aliases for archlinux
 alias sudo='A=`alias` sudo '
 alias ls='ls --color=auto'
