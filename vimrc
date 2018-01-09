@@ -43,10 +43,6 @@ augroup vimrc_autocmds
 augroup END
 
 
-
-
-""""""""""""""""""""""""""FONT
-
 """""""""""""""""""""""""""Vundle settings
 set nocompatible
 filetype off
@@ -64,6 +60,7 @@ Plugin 'majutsushi/tagbar'
 
 "Colorshemes & Icons
 Plugin 'junegunn/seoul256.vim'
+Plugin 'nightsense/simplifysimplify'
 Plugin 'ryanoasis/vim-webdevicons'
 Plugin 'vim-airline/vim-airline-themes'
 "Other
@@ -85,12 +82,15 @@ Plugin 'pboettch/vim-cmake-syntax'
 "Go
 Plugin 'fatih/vim-go'
 
+"Java
+
+
+
 call vundle#end()
 filetype plugin indent on
 
-""""""""""""""""""""""""""COLOR
-colorscheme seoul256
-
+""""""""""""""""""""""""""COLOR SHM
+colorscheme zenburn
 
 "VIM-airline
 let g:airline_theme='badwolf'
