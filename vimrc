@@ -54,21 +54,30 @@ call vundle#begin()
 Bundle 'noah/vim256-color'
 Plugin 'gmarik/Vundle.vim'
 
-"Navigation
+" Language Pack
+Plugin 'sheerun/vim-polyglot'
+
+" Navigation
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 
 "Colorshemes & Icons
-Plugin 'junegunn/seoul256.vim'
 Plugin 'nightsense/simplifysimplify'
 Plugin 'ryanoasis/vim-webdevicons'
 Plugin 'vim-airline/vim-airline-themes'
+
 "Other
 Plugin 'valloric/youcompleteme'
 Plugin 'bling/vim-airline'
 Plugin 'fisadev/FixedTaskList.vim'
 Plugin 'rosenfeld/conque-term'
 Plugin 'tpope/vim-surround'
+
+"Snippets
+Plugin 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'honza/vim-snippets'
 
 "Python
 Plugin 'klen/python-mode'
@@ -85,8 +94,9 @@ Plugin 'fatih/vim-go'
 "Java
 
 
-
 call vundle#end()
+filetype on
+filetype plugin on
 filetype plugin indent on
 
 """"""""""""""""""""""""""COLOR SHM
@@ -95,6 +105,7 @@ colorscheme zenburn
 "VIM-airline
 let g:airline_theme='badwolf'
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 
 "TaskList
@@ -103,9 +114,21 @@ map <F2> :TaskList<CR>
 " =====================
 "     Python-mode
 " =====================
+set backspace=indent,eol,start
+aunmenu Help.
+aunmenu Window.
+let no_buffers_menu=1
+set mousemodel=popup
+
+set ruler
+set completeopt-=preview
+set gcr=a:blinkon0
+set ttyfast
+
 let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 0
+let g:pymode_python = 'python3'
 
 "lint
 let g:pymode_lint = 1
