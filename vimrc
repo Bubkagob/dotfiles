@@ -1,3 +1,5 @@
+scriptencoding utf-8
+set encoding=utf-8
 map <C-n> :NERDTreeToggle<CR>
 set expandtab
 set tabstop=4
@@ -40,8 +42,19 @@ augroup vimrc_autocmds
     autocmd FileType ruby,python,javascript,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
     autocmd FileType ruby,python,javascript,c,cpp match Excess /\%80v.*/
     autocmd FileType ruby,python,javascript,c,cpp set nowrap
+    autocmd FileType make setlocal noexpandtab
 augroup END
 
+
+augroup autoformat_settings
+    autocmd FileType bzl AutoFormatBuffer buildifier
+    autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+    autocmd FileType dart AutoFormatBuffer dartfmt
+    autocmd FileType go AutoFormatBuffer gofmt
+    autocmd FileType gn AutoFormatBuffer gn
+    autocmd FileType html,css,json AutoFormatBuffer js-beautify
+    autocmd Filetype java AutoFormatBuffer google-java-format
+augroup END
 
 """""""""""""""""""""""""""Vundle settings
 set nocompatible
@@ -91,10 +104,20 @@ Plugin 'pboettch/vim-cmake-syntax'
 "Go
 Plugin 'fatih/vim-go'
 
-"Java
+"JavaScript
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'moll/vim-node'
+
+" Google AutoFormatter
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+Plugin 'google/vim-glaive'
 
 
 call vundle#end()
+
+call glaive#Install()
+
 filetype on
 filetype plugin on
 filetype plugin indent on
@@ -158,6 +181,11 @@ let g:jedi#popup_select_first = 0
 " ALL
 " =============
 inoremap <C-space> <C-x><C-o>
+
+" Show Tabs and Spaces
+set listchars=tab:\ \ ,trail:•,eol:⁋,nbsp:_
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
 
 "Python
 autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8
