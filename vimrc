@@ -1,196 +1,96 @@
-scriptencoding utf-8
-set encoding=utf-8
-map <C-n> :NERDTreeToggle<CR>
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set et
-set wrap
-set ai
-set cin
-" ==========
-" C++
-" ==========
-set exrc
-set secure
-
-set number
-set showmatch
-set hlsearch
-set incsearch
-set ignorecase
-set lz
-set ffs=unix,dos,mac
-set fencs=utf-8,cp1251,koi8-r,ucs-2,cp-866
-syntax on
-
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [POS=%04l,%04v]\ [LEN=%L]
-set laststatus=2
-
-set wildmenu "drop down menu
-set pastetoggle=  "intendention
-
-"No backups & swaps
-set nobackup
-set nowritebackup
-set noswapfile
-
-"Highlight when COLS > 80
-augroup vimrc_autocmds
-    autocmd!
-    autocmd FileType ruby,python,javascript,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
-    autocmd FileType ruby,python,javascript,c,cpp match Excess /\%80v.*/
-    autocmd FileType ruby,python,javascript,c,cpp set nowrap
-    autocmd FileType make setlocal noexpandtab
-augroup END
+" ################## Linux Prelude ###########################################
+"
+" mkdir -p ~/.local/share/fonts
+" cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+"
+" ################## MAC Prelude #############################################
+"
+" cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 
 
-augroup autoformat_settings
-    autocmd FileType bzl AutoFormatBuffer buildifier
-    autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
-    autocmd FileType dart AutoFormatBuffer dartfmt
-    autocmd FileType go AutoFormatBuffer gofmt
-    autocmd FileType gn AutoFormatBuffer gn
-    autocmd FileType html,css,json AutoFormatBuffer js-beautify
-    autocmd Filetype java AutoFormatBuffer google-java-format
-augroup END
 
-"""""""""""""""""""""""""""Vundle settings
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-
+" ##################################################################
+" 			Plugins
+" ##################################################################
+filetype off		" required
+set rtp+=~/.vim/bundle/Vundle.vim " set Vundle runtime path
 call vundle#begin()
 
-Bundle 'noah/vim256-color'
-Plugin 'gmarik/Vundle.vim'
 
-" Language Pack
-Plugin 'sheerun/vim-polyglot'
+Plugin 'Vundle/Vundle.vim'	" let Vundle manage Vundle, required
+Plugin 'Zenburn'            " Theme
+Plugin 'sjl/gundo.vim'      " Undo-tree
+Plugin 'ctrlpvim/ctrlp.vim' " File search
+Plugin 'scrooloose/nerdtree' " file navigation
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' " highlight syntax
+Plugin 'ryanoasis/vim-devicons' " Nerd-tree icons
+Plugin 'vim-airline/vim-airline' " Nice bottom status line
+Plugin 'vim-airline/vim-airline-themes' " Themes for Vim - airline
 
-" Navigation
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-
-"Colorshemes & Icons
-Plugin 'nightsense/simplifysimplify'
-Plugin 'ryanoasis/vim-webdevicons'
-Plugin 'vim-airline/vim-airline-themes'
-
-"Other
-Plugin 'valloric/youcompleteme'
-Plugin 'bling/vim-airline'
-Plugin 'fisadev/FixedTaskList.vim'
-Plugin 'rosenfeld/conque-term'
-Plugin 'tpope/vim-surround'
-
-"Snippets
-Plugin 'garbas/vim-snipmate'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
-
-"Python
-Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'mitsuhiko/vim-jinja'
-Plugin 'mitsuhiko/vim-python-combined'
-
-"Cmake
-Plugin 'pboettch/vim-cmake-syntax'
-
-"Go
-Plugin 'fatih/vim-go'
-
-"JavaScript
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'moll/vim-node'
-
-" Google AutoFormatter
-Plugin 'google/vim-maktaba'
-Plugin 'google/vim-codefmt'
-Plugin 'google/vim-glaive'
 
 
 call vundle#end()
+filetype plugin indent on	" required
 
-call glaive#Install()
 
-filetype on
-filetype plugin on
-filetype plugin indent on
 
-""""""""""""""""""""""""""COLOR SHM
-colorscheme zenburn
+" ##################################################################
+" 		Colorschneme config
+" ##################################################################
+colorschem zenburn
 
-"VIM-airline
+" ##################################################################
+"	General
+" ##################################################################
+set nocompatible	    " do not use VI-compatibilty
+syntax enable			" syntax highlight
+
+set tabstop=4           " counts for When open file
+set softtabstop=4       " Then you press <Tab> and <BackSpace>
+set expandtab           " Tabs --> Spaces converter
+
+set number              " show line numbers
+set showcmd             " show comman in bottom bar
+set cursorline          " highlight current line
+set wildmenu            " visual autocomplete
+set lazyredraw          " redraw only when we need it
+set showmatch           " highlight matching [{()}]
+
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+nnoremap <leader><space> :nohlsearch<CR>    " Turn off by pressing \ + SPACE
+
+set foldenable          " enable folding
+set foldlevelstart=10   " open most folds by default
+set foldnestmax=10      " 10 nested fold max
+set foldmethod=indent   " fold based on indentation
+nnoremap <space> za     " space open/close folds
+nnoremap gV `[v`]       " highlight last inserter text
+
+" #####################################################################
+"       Plugin Configuration
+" #####################################################################
+
+" Gundo setiings
+nnoremap <leader>u :GundoToggle<CR> " Gundo Toggle
+
+" CtrlP settings
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+
+" NerdTree settings
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+
+let g:NERDTreeHighlightFolders = 1
+let g:NERDTreeHighlightFoldersFullName = 1
+
+" Airline settings
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='badwolf'
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#formatter='unique_tail'
+let g:airliner_powerline_fonts=1
+let g:airliner#extensions#tebline#formatter='unique_tail_improved'
 
-"TaskList
-map <F2> :TaskList<CR>
-
-" =====================
-"     Python-mode
-" =====================
-set backspace=indent,eol,start
-aunmenu Help.
-aunmenu Window.
-let no_buffers_menu=1
-set mousemodel=popup
-
-set ruler
-set completeopt-=preview
-set gcr=a:blinkon0
-set ttyfast
-
-let g:pymode_rope = 0
-let g:pymode_rope_completion = 0
-let g:pymode_rope_complete_on_dot = 0
-let g:pymode_python = 'python3'
-
-"lint
-let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8"
-let g:pymode_lint_ignore = "E501,W601,C0110"
-let g:pymode_lint_write = 1
-let g:pymode_virtualenv = 1
-"Breakpoints
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_key = '<leader>b'
-"Syntax highlight
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
-"Other
-let g:pymode_folding = 0
-let g:pymode_run = 0
-let g:pymode_python = 'python3'
-" =============
-" JEDI
-" =============
-let g:jedi#popup_select_first = 0
-"autocmd FileType python set completeopt-=preview
-
-" =============
-" ALL
-" =============
-inoremap <C-space> <C-x><C-o>
-
-" Show Tabs and Spaces
-set listchars=tab:\ \ ,trail:•,eol:⁋,nbsp:_
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
-
-"Python
-autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8
-            \ formatoptions+=croq softtabstop=4 smartindent
-            \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-autocmd Filetype pyrex setlocal expandtab shiftwidth=4 tabstop=8
-            \ softtabstop=4 smartindent
-            \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
