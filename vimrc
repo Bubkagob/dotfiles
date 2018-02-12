@@ -17,7 +17,7 @@ set rtp+=~/.vim/bundle/Vundle.vim " set Vundle runtime path
 call vundle#begin()
 
 
-Plugin 'Vundle/Vundle.vim'	" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'	" let Vundle manage Vundle, required
 Plugin 'Zenburn'            " Theme
 Plugin 'sjl/gundo.vim'      " Undo-tree
 Plugin 'ctrlpvim/ctrlp.vim' " File search
