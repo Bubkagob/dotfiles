@@ -26,13 +26,11 @@ Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' " highlight syntax
 Plugin 'ryanoasis/vim-devicons' " Nerd-tree icons
 Plugin 'vim-airline/vim-airline' " Nice bottom status line
 Plugin 'vim-airline/vim-airline-themes' " Themes for Vim - airline
-
-
+Plugin 'scrooloose/syntastic'   " Syntax plugin
+Plugin 'tpope/vim-fugitive'     " Git plugin
 
 call vundle#end()
 filetype plugin indent on	" required
-
-
 
 " ##################################################################
 " 		Colorschneme config
@@ -48,7 +46,7 @@ syntax enable			" syntax highlight
 set tabstop=4           " counts for When open file
 set softtabstop=4       " Then you press <Tab> and <BackSpace>
 set expandtab           " Tabs --> Spaces converter
-
+set shiftwidth=4        " Shift
 set number              " show line numbers
 set showcmd             " show comman in bottom bar
 set cursorline          " highlight current line
@@ -56,16 +54,28 @@ set wildmenu            " visual autocomplete
 set lazyredraw          " redraw only when we need it
 set showmatch           " highlight matching [{()}]
 
+set ai                  " auto-indentation
+set cin                 " c-style indentation
+
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
+set ignorecase          " Ignore Case
 nnoremap <leader><space> :nohlsearch<CR>    " Turn off by pressing \ + SPACE
 
 set foldenable          " enable folding
-set foldlevelstart=10   " open most folds by default
+set foldmethod=syntax   " fold based on indentat
+set foldlevelstart=1    " open most folds by default
 set foldnestmax=10      " 10 nested fold max
-set foldmethod=indent   " fold based on indentation
 nnoremap <space> za     " space open/close folds
 nnoremap gV `[v`]       " highlight last inserter text
+
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [POS=%04l,%04v]\ [LEN=%L]
+set laststatus=2
+
+set nobackup            " Disable backups
+set nowritebackup       "
+set noswapfile          " Disable swap-files
+
 
 " #####################################################################
 "       Plugin Configuration
@@ -94,3 +104,12 @@ let g:airline_theme='badwolf'
 let g:airliner_powerline_fonts=1
 let g:airliner#extensions#tebline#formatter='unique_tail_improved'
 
+" SYNTASTIC
+set statusline+=%warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
