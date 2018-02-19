@@ -9,16 +9,15 @@
 
 
 
-" ##################################################################
+" #############################################################################
 " 			Plugins
-" ##################################################################
+" #############################################################################
 filetype off		" required
 set rtp+=~/.vim/bundle/Vundle.vim " set Vundle runtime path
 call vundle#begin()
 
-
 Plugin 'gmarik/Vundle.vim'	" let Vundle manage Vundle, required
-Plugin 'Zenburn'            " Theme
+Plugin 'junegunn/seoul256.vim' " Seoul theme
 Plugin 'sjl/gundo.vim'      " Undo-tree
 Plugin 'ctrlpvim/ctrlp.vim' " File search
 Plugin 'scrooloose/nerdtree' " file navigation
@@ -28,18 +27,22 @@ Plugin 'vim-airline/vim-airline' " Nice bottom status line
 Plugin 'vim-airline/vim-airline-themes' " Themes for Vim - airline
 Plugin 'scrooloose/syntastic'   " Syntax plugin
 Plugin 'tpope/vim-fugitive'     " Git plugin
+Plugin 'chase/vim-ansible-yaml' " YAML plugin
 
 call vundle#end()
 filetype plugin indent on	" required
 
-" ##################################################################
+" #############################################################################
 " 		Colorschneme config
-" ##################################################################
-colorschem zenburn
+" #############################################################################
+let g:seoul256_background = 236
+colorschem seoul256
 
-" ##################################################################
+" #############################################################################
 "	General
-" ##################################################################
+" #############################################################################
+set fileformat=unix
+set fileformats=unix,dos
 set nocompatible	    " do not use VI-compatibilty
 syntax enable			" syntax highlight
 
@@ -48,7 +51,7 @@ set softtabstop=4       " Then you press <Tab> and <BackSpace>
 set expandtab           " Tabs --> Spaces converter
 set shiftwidth=4        " Shift
 set number              " show line numbers
-set showcmd             " show comman in bottom bar
+set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
 set wildmenu            " visual autocomplete
 set lazyredraw          " redraw only when we need it
@@ -75,12 +78,10 @@ set laststatus=2
 set nobackup            " Disable backups
 set nowritebackup       "
 set noswapfile          " Disable swap-files
-
-
-" #####################################################################
+set colorcolumn=80
+" #############################################################################
 "       Plugin Configuration
-" #####################################################################
-
+" #############################################################################
 " Gundo setiings
 nnoremap <leader>u :GundoToggle<CR> " Gundo Toggle
 
@@ -101,15 +102,17 @@ let g:NERDTreeHighlightFoldersFullName = 1
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='badwolf'
-let g:airliner_powerline_fonts=1
-let g:airliner#extensions#tebline#formatter='unique_tail_improved'
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#formatter='unique_tail_improved'
 
 " SYNTASTIC
 set statusline+=%warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_python_checkers = ['flake8', 'pylint']
+let g:syntastic_python_pylint_args="-d C0103,C0111,R0201"
