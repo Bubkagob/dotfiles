@@ -1,11 +1,17 @@
 " ################## Linux Prelude ###########################################
 "
 " mkdir -p ~/.local/share/fonts
-" cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+" cd ~/.local/share/fonts && curl -fLo 
+" "Droid Sans Mono for Powerline Nerd Font Complete.otf" 
+" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts
+" /DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 "
 " ################## MAC Prelude #############################################
 "
-" cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+" cd ~/Library/Fonts && curl -fLo
+" "Droid Sans Mono for Powerline Nerd Font Complete.otf"
+" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts
+" /DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 
 
 
@@ -28,6 +34,11 @@ Plugin 'vim-airline/vim-airline-themes' " Themes for Vim - airline
 Plugin 'scrooloose/syntastic'   " Syntax plugin
 Plugin 'tpope/vim-fugitive'     " Git plugin
 Plugin 'chase/vim-ansible-yaml' " YAML plugin
+" --------- Python ------------
+Plugin 'klen/python-mode'   " Python mode
+Plugin 'davidhalter/jedi-vim'   " Jedi-autocomplete
+Plugin 'mitsuhiko/vim-jinja'    " Jinja support for vim
+Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
 
 call vundle#end()
 filetype plugin indent on	" required
@@ -79,6 +90,23 @@ set nobackup            " Disable backups
 set nowritebackup       "
 set noswapfile          " Disable swap-files
 set colorcolumn=80
+augroup vimrc_autocmds
+    autocmd!
+    autocmd FileType ruby,python,javascript,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
+    autocmd FileType ruby,python,javascript,c,cpp match Excess /\%80v.*/
+    autocmd FileType ruby,python,javascript,c,cpp set nowrap
+augroup END
+set backspace=indent,eol,start
+aunmenu Help
+aunmenu Window
+let no_buffers_menu=1
+set mousemodel=popup
+
+set ruler
+set completeopt-=preview
+set encoding=utf-8
+set ls=2
+
 " #############################################################################
 "       Plugin Configuration
 " #############################################################################
@@ -116,3 +144,34 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['flake8', 'pylint']
 let g:syntastic_python_pylint_args="-d C0103,C0111,R0201"
+
+" Python-mode settings
+hi pythonSelf ctermfg=68 guifg=#5f87d7 cterm=bold gui=bold
+let g:pymode_rope = 0                   " 
+let g:pymode_rope_completion = 0        "   Switch off autocompletion (Jedi in)
+let g:pymode_rope_complete_on_dot = 0   "
+
+let g:pymode_doc = 0
+let g:pymode_doc_key = 'K'
+
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_ignore = "E501,W601,C0110"
+let g:pymode_lint_write = 1
+
+let g:pymode_virtualenv = 1
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_key = '<leader>b'
+
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+let g:pymode_folding = 0
+
+let g:pymode_run = 0
+
+" Python --- >  Jedi Settings
+let g:jedi#popup_select_first = 0
+let g:jedi#completions_command = "<C-Space>"
