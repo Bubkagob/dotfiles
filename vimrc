@@ -148,6 +148,7 @@ let g:syntastic_python_pylint_args="-d C0103,C0111,R0201"
 
 " Python-mode settings
 hi pythonSelf ctermfg=68 guifg=#5f87d7 cterm=bold gui=bold
+let g:pymode_python = "python3"
 let g:pymode_rope = 0                   " 
 let g:pymode_rope_completion = 0        "   Switch off autocompletion (Jedi in)
 let g:pymode_rope_complete_on_dot = 0   "
