@@ -108,6 +108,8 @@ set completeopt-=preview
 set encoding=utf-8
 set ls=2
 
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
 " #############################################################################
 "       Plugin Configuration
 " #############################################################################
