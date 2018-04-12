@@ -1,7 +1,7 @@
 #!/bin/bash
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="config/nvim/init.vim i3/config bashrc vimrc tmux.conf"
+files="bashrc vimrc tmux.conf"
 
 
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
