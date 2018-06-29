@@ -32,7 +32,7 @@ Plugin 'ryanoasis/vim-devicons' " Nerd-tree icons
 Plugin 'vim-airline/vim-airline' " Nice bottom status line
 Plugin 'vim-airline/vim-airline-themes' " Themes for Vim - airline
 Plugin 'scrooloose/syntastic'   " Syntax plugin
-Plugin 'tpope/vim-fugitive'     " Git plugin
+Plugin 'airblade/vim-gitgutter'   " Git plugin
 Plugin 'tpope/vim-surround'     " XML, HTML quoting/parenthesizing
 Plugin 'chase/vim-ansible-yaml' " YAML plugin
 " --------- Python ------------
