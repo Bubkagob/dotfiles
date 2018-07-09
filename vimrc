@@ -1,5 +1,8 @@
 " ################## Linux Prelude ###########################################
 "
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/
+"
+"
 " mkdir -p ~/.local/share/fonts
 " cd ~/.local/share/fonts && curl -fLo 
 " "Droid Sans Mono for Powerline Nerd Font Complete.otf" 
