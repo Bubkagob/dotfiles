@@ -150,10 +150,6 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-gaps inner 2
-gaps outer 0
-smart_gaps on
-for_window [class="^.*"] border pixel 1
 
 bindsym $mod+r mode "resize"
 
