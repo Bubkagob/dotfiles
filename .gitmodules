@@ -1,0 +1,18 @@
+[submodule "vim/pack/bundle/start/i3config"]
+	path = vim/pack/bundle/start/i3config
+	url = https://github.com/PotatoesMaster/i3-vim-syntax.git
+[submodule "vim/pack/bundle/start/vim-devicons"]
+	path = vim/pack/bundle/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons.git
+[submodule "vim/pack/bundle/start/vim-surround"]
+	path = vim/pack/bundle/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/pack/bundle/start/vim-unimpaired"]
+	path = vim/pack/bundle/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "vim/pack/bundle/start/syntastic"]
+	path = vim/pack/bundle/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/pack/bundle/opt/vim-scriptease"]
+	path = vim/pack/bundle/opt/vim-scriptease
+	url = https://github.com/tpope/vim-scriptease.git

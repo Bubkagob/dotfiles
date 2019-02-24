@@ -24,4 +24,9 @@ done
 echo "i3"
 mv ~/.config/i3 ~/dotfiles_old/i3
 echo "Symlink i3"
-ls -s $dir/i3 ~/.config/i3
+ln -s $dir/i3 ~/.config/i3
+
+echo "vim"
+mv ~/.vim ~/$olddir/vim
+echo "Symlinking vim"
+ln -s $dir/vim ~/.vim
