@@ -16,6 +16,6 @@
 [submodule "vim/pack/bundle/opt/vim-scriptease"]
 	path = vim/pack/bundle/opt/vim-scriptease
 	url = https://github.com/tpope/vim-scriptease.git
-[submodule "vim/pack/bundle/colorschemes"]
-	path = vim/pack/bundle/colorschemes
+[submodule "vim/pack/bundle/start/colorschemes"]
+	path = vim/pack/bundle/start/colorschemes
 	url = https://github.com/flazz/vim-colorschemes
