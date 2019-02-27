@@ -19,3 +19,6 @@
 [submodule "vim/pack/bundle/start/colorschemes"]
 	path = vim/pack/bundle/start/colorschemes
 	url = https://github.com/flazz/vim-colorschemes
+[submodule "vim/pack/bundle/start/vim-material"]
+	path = vim/pack/bundle/start/vim-material
+	url = https://github.com/kaicataldo/material.vim.git

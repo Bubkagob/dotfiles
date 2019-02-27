@@ -30,3 +30,13 @@ echo "vim"
 mv ~/.vim $olddir/vim
 echo "Symlinking vim"
 ln -s $dir/vim ~/.vim
+
+echo "gxkb"
+mv ~/.config/gxkb/gxkb.cfg $olddir
+echo "Symlink gxkb"
+ln -s $dir/gxkb.cfg ~/.config/gxkb/gxkb.cfg
+
+echo "termite"
+mv ~/.config/termite $olddir/termite
+echo "Link Termite"
+ln -s $dir/termite ~/.config/termite
