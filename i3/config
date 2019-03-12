@@ -10,11 +10,12 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 bindsym Control+Mod1+l exec i3lock
 
-set $displayMode "Set display mode [d]ouble of [m]irror"
+set $displayMode "Set display mode [d]ouble of [m]irror, [w]ide"
 bindsym $mod+x mode $displayMode
 mode $displayMode {
 	bindsym d exec "~/.config/i3/scripts/double-displays.sh"; mode "default"
 	bindsym m exec "~/.config/i3/scripts/mirror-displays.sh"; mode "default"
+    bindsym w exec "~/.config/i3/scripts/z230.sh"; mode "default"
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }

@@ -58,54 +58,54 @@ cursor_shape = ibeam
 # Author: Nate Peterson
 
 [colors]
-# Base16 OneDark
-# Author: Lalit Magant (http://github.com/tilal6991)
+# Base16 Zenburn
+# Author: elnawe
 
-foreground          = #abb2bf
-foreground_bold     = #b6bdca
-cursor              = #b6bdca
-cursor_foreground   = #282c34
-background          = rgba(40, 44, 52)
+foreground          = #dcdccc
+foreground_bold     = #c0c0c0
+cursor              = #c0c0c0
+cursor_foreground   = #3f3f3f
+background          = rgba(63, 63, 63)
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #282c34
-color8  = #545862
-color7  = #abb2bf
-color15 = #c8ccd4
+color0  = #3f3f3f
+color8  = #4f4f4f
+color7  = #dcdccc
+color15 = #ffffff
 
 # Red
-color1  = #e06c75
-color9  = #e06c75
+color1  = #dca3a3
+color9  = #dca3a3
 
 # Green
-color2  = #98c379
-color10 = #98c379
+color2  = #5f7f5f
+color10 = #5f7f5f
 
 # Yellow
-color3  = #e5c07b
-color11 = #e5c07b
+color3  = #e0cf9f
+color11 = #e0cf9f
 
 # Blue
-color4  = #61afef
-color12 = #61afef
+color4  = #7cb8bb
+color12 = #7cb8bb
 
 # Purple
-color5  = #c678dd
-color13 = #c678dd
+color5  = #dc8cc3
+color13 = #dc8cc3
 
 # Teal
-color6  = #56b6c2
-color14 = #56b6c2
+color6  = #93e0e3
+color14 = #93e0e3
 
 # Extra colors
-color16 = #d19a66
-color17 = #be5046
-color18 = #353b45
-color19 = #3e4451
-color20 = #565c64
-color21 = #b6bdca
+color16 = #dfaf8f
+color17 = #000000
+color18 = #404040
+color19 = #606060
+color20 = #808080
+color21 = #c0c0c0
 
 [hints]
 #font = Monospace 12
