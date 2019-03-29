@@ -4,7 +4,7 @@ audible_bell = true
 bold_is_bright = true
 clickable_url = true
 dynamic_title = true
-font = Ubuntu Mono 16
+font = Ubuntu Mono 18
 #fullscreen = true
 #icon_name = terminal
 mouse_autohide = true
@@ -65,7 +65,7 @@ foreground          = #c5c8c6
 foreground_bold     = #e0e0e0
 cursor              = #e0e0e0
 cursor_foreground   = #1d1f21
-background          = rgba(29, 31, 33)
+background          = rgba(63, 63, 63, 0.8)
 
 # 16 color space
 
