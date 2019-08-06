@@ -26,7 +26,7 @@ PS1='\[\e[1;32m\][\W]\$ \[\e[m\]'
 # Aliases for archlinux
 alias sudo='A=`alias` sudo '
 alias ls='ls --color=auto'
-#alias pacman='pacman-color'
+# alias pacman='pacman-color'
 export EDITOR="vim" 
 
 # Normal Colors

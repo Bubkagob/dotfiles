@@ -27,4 +27,4 @@ set encoding=utf-8
 set ls=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}\ [POS=%04l,%04v]\ [LEN=%L]
 set laststatus=2
-colo material
+colo seoul256
