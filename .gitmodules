@@ -25,3 +25,6 @@
 [submodule "vim/pack/bundle/start/youcompleteme"]
 	path = vim/pack/bundle/start/youcompleteme
 	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "vim/pack/bundle/start/setcolors"]
+	path = vim/pack/bundle/start/setcolors
+	url = https://github.com/felixhummel/setcolors.vim.git
