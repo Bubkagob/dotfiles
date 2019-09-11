@@ -1,4 +1,9 @@
 #!/bin/bash
+
+sudo pacman -S --noconfirm vim tmux gxkb
+git submodule init
+git submodule update --recursive
+
 dir=~/dotfiles
 olddir=~/dotfiles_old
 files="bashrc vimrc tmux.conf"
