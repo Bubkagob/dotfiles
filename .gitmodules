@@ -28,3 +28,6 @@
 [submodule "vim/pack/bundle/start/setcolors"]
 	path = vim/pack/bundle/start/setcolors
 	url = https://github.com/felixhummel/setcolors.vim.git
+[submodule "tmux-themepack"]
+	path = tmux-themepack
+	url = https://github.com/jimeh/tmux-themepack.git
