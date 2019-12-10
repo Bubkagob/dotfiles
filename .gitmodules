@@ -28,3 +28,6 @@
 [submodule "tmux-themepack"]
 	path = tmux-themepack
 	url = https://github.com/jimeh/tmux-themepack.git
+[submodule "vim/pack/bundle/start/auto-pairs"]
+	path = vim/pack/bundle/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm vim tmux gxkb
-git submodule init
-git submodule update --recursive
+# sudo pacman -S --noconfirm vim tmux gxkb
+# git submodule init
+# git submodule update --recursive
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
@@ -13,11 +13,9 @@ echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
 echo "done"
 
-
 echo -n "Changing to the $dir directory ..." 
 cd $dir
 echo "done"
-
 
 for file in $files; do
 	echo "Moving"
