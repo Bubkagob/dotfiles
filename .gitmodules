@@ -22,9 +22,6 @@
 [submodule "vim/pack/bundle/start/vim-material"]
 	path = vim/pack/bundle/start/vim-material
 	url = https://github.com/kaicataldo/material.vim.git
-[submodule "vim/pack/bundle/start/youcompleteme"]
-	path = vim/pack/bundle/start/youcompleteme
-	url = https://github.com/ycm-core/YouCompleteMe.git
 [submodule "vim/pack/bundle/start/setcolors"]
 	path = vim/pack/bundle/start/setcolors
 	url = https://github.com/felixhummel/setcolors.vim.git
