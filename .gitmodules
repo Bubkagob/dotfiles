@@ -40,3 +40,6 @@
 [submodule "vim/pack/bundle/start/vim-perl"]
 	path = vim/pack/bundle/start/vim-perl
 	url = https://github.com/vim-perl/vim-perl.git
+[submodule "vim/pack/bundle/start/simply-fold"]
+	path = vim/pack/bundle/start/simply-fold
+	url = https://github.com/tmhedberg/SimpylFold.git
