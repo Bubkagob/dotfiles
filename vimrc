@@ -27,4 +27,28 @@ set encoding=utf-8
 set ls=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}\ [POS=%04l,%04v]\ [LEN=%L]
 set laststatus=2
+set pastetoggle=<F2>
 colo seoul256
+
+" #######################################
+"
+"   NerdTree
+"
+" #######################################
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+let g:NERDTreeShowIgnoredStatus = 1

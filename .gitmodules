@@ -31,3 +31,12 @@
 [submodule "vim/pack/bundle/start/auto-pairs"]
 	path = vim/pack/bundle/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "vim/pack/bundle/start/nerdtree"]
+	path = vim/pack/bundle/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/pack/bundle/start/nerdtree-git-plugin"]
+	path = vim/pack/bundle/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "vim/pack/bundle/start/vim-perl"]
+	path = vim/pack/bundle/start/vim-perl
+	url = https://github.com/vim-perl/vim-perl.git
