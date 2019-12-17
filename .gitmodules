@@ -43,3 +43,6 @@
 [submodule "vim/pack/bundle/start/simply-fold"]
 	path = vim/pack/bundle/start/simply-fold
 	url = https://github.com/tmhedberg/SimpylFold.git
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm

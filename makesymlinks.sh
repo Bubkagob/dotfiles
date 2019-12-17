@@ -43,3 +43,7 @@ echo "termite"
 mv ~/.config/termite $olddir/termite
 echo "Link Termite"
 ln -s $dir/termite ~/.config/termite
+
+echo "tmux"
+echo "Link Tmux"
+ln -s $dir/tmux ~/.tmux
