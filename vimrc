@@ -9,8 +9,9 @@ set noswapfile
 set nowritebackup
 set number
 filetype on
+filetype plugin on
 filetype plugin indent on
-syntax enable
+syntax on
 set backspace=indent,eol,start
 set expandtab
 set tabstop=4
@@ -35,9 +36,25 @@ colo seoul256
 
 
 " #######################################
-"
+"   YAML
+" #######################################
+"Get the 2-space YAML as the default when hit carriage return after the colon
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" #######################################
+"   PERL
+" #######################################
+
+set foldmethod=syntax |
+set foldlevelstart=1 |
+let perl_fold=1 |
+let sh_fold_enabled=1 |
+let perl_extended_vars=1 |
+let perl_sync_dist=250
+
+
+" #######################################
 "   NerdTree
-"
 " #######################################
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -56,11 +73,3 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 let g:NERDTreeShowIgnoredStatus = 1
-
-set foldmethod=syntax
-set foldlevelstart=1
-let perl_fold=1
-let sh_fold_enabled=1
-let perl_extended_vars=1
-let perl_sync_dist=250
-
