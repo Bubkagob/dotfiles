@@ -1,7 +1,7 @@
 #
 # ~/.bashrc
 #
-
+XDG_CURRENT_DESKTOP=XFCE
 #History
 shopt -s histappend
 PROMT_COMMAND='history -a'
@@ -18,6 +18,8 @@ shopt -s dirspell
 
 alias ls='ls --color=auto'
 
+# trash-cli : trash-list, restore-trash, trash-empty
+alias rm=trash
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -63,3 +65,12 @@ NC="\e[m"               # Color Reset
 
 export PATH="/usr/lib/ccache/bin/:$PATH"
 export MAKEFLAGS="-j5 -l4"
+
+# enable bash completion in interactive shells
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi

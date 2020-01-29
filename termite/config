@@ -4,7 +4,8 @@ audible_bell = true
 bold_is_bright = true
 clickable_url = true
 dynamic_title = true
-font = Ubuntu Mono 18
+font = JetBrains Mono 16
+#font = Ubuntu Mono 16
 #fullscreen = true
 #icon_name = terminal
 mouse_autohide = true
@@ -24,7 +25,7 @@ scrollback_lines = 10000
 cursor_blink = on
 
 # "block", "underline" or "ibeam"
-cursor_shape = ibeam
+cursor_shape = block
 
 # Hide links that are no longer valid in url select overlay mode
 #filter_unmatched_urls = true
@@ -34,78 +35,103 @@ cursor_shape = ibeam
 
 # set size hints for the window
 #size_hints = false
-
 # "off", "left" or "right"
-#scrollbar = off
-
+scrollbar = right
 [colors]
-# If both of these are unset, cursor falls back to the foreground color,
-# and cursor_foreground falls back to the background color.
-#cursor = #dcdccc
-#cursor_foreground = #dcdccc
-
-#foreground = #dcdccc
-#foreground_bold = #ffffff
-#background = #3f3f3f
-
-# 20% background transparency (requires a compositor)
-#background = rgba(63, 63, 63, 0.8)
-
-# If unset, will reverse foreground and background
-# highlight = #2f2f2f
-
-# Base16 Material Palenight
-# Author: Nate Peterson
-
-[colors]
-# Base16 Tomorrow Night
-# Author: Chris Kempson (http://chriskempson.com)
-
-foreground          = #c5c8c6
-foreground_bold     = #e0e0e0
-cursor              = #e0e0e0
-cursor_foreground   = #1d1f21
-background          = rgba(63, 63, 63, 0.8)
+foreground          = #dcdccc
+foreground_bold     = #c0c0c0
+cursor              = #c0c0c0
+cursor_foreground   = #3f3f3f
+background          = rgba(63, 63, 63)
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #1d1f21
-color8  = #969896
-color7  = #c5c8c6
+color0  = #3f3f3f
+color8  = #4f4f4f
+color7  = #dcdccc
 color15 = #ffffff
 
 # Red
-color1  = #cc6666
-color9  = #cc6666
+color1  = #dca3a3
+color9  = #dca3a3
 
 # Green
-color2  = #b5bd68
-color10 = #b5bd68
+color2  = #5f7f5f
+color10 = #5f7f5f
 
 # Yellow
-color3  = #f0c674
-color11 = #f0c674
+color3  = #e0cf9f
+color11 = #e0cf9f
 
 # Blue
-color4  = #81a2be
-color12 = #81a2be
+color4  = #7cb8bb
+color12 = #7cb8bb
 
 # Purple
-color5  = #b294bb
-color13 = #b294bb
+color5  = #dc8cc3
+color13 = #dc8cc3
 
 # Teal
-color6  = #8abeb7
-color14 = #8abeb7
+color6  = #93e0e3
+color14 = #93e0e3
 
 # Extra colors
-color16 = #de935f
-color17 = #a3685a
-color18 = #282a2e
-color19 = #373b41
-color20 = #b4b7b4
-color21 = #e0e0e0
+color16 = #dfaf8f
+color17 = #000000
+color18 = #404040
+color19 = #606060
+color20 = #808080
+color21 = #c0c0c0
+#[colors]
+## Base16 Tomorrow Night
+## Author: Chris Kempson (http://chriskempson.com)
+#
+#foreground          = #c5c8c6
+#foreground_bold     = #e0e0e0
+#cursor              = #e0e0e0
+#cursor_foreground   = #1d1f21
+#background          = rgba(63, 63, 63, 0.8)
+#
+## 16 color space
+#
+## Black, Gray, Silver, White
+#color0  = #1d1f21
+#color8  = #969896
+#color7  = #c5c8c6
+#color15 = #ffffff
+#
+## Red
+#color1  = #cc6666
+#color9  = #cc6666
+#
+## Green
+#color2  = #b5bd68
+#color10 = #b5bd68
+#
+## Yellow
+#color3  = #f0c674
+#color11 = #f0c674
+#
+## Blue
+#color4  = #81a2be
+#color12 = #81a2be
+#
+## Purple
+#color5  = #b294bb
+#color13 = #b294bb
+#
+## Teal
+#color6  = #8abeb7
+#color14 = #8abeb7
+#
+## Extra colors
+#color16 = #de935f
+#color17 = #a3685a
+#color18 = #282a2e
+#color19 = #373b41
+#color20 = #b4b7b4
+#color21 = #e0e0e0
 
 [hints]
 #font = Monospace 12
@@ -116,6 +142,6 @@ color21 = #e0e0e0
 #padding = 2
 border = #3f3f3f
 border_width = 0.5
-#roundness = 2.0
+roundness = 2.0
 
 # vim: ft=dosini cms=#%s
