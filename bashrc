@@ -23,7 +23,8 @@ alias rm=trash
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-PS1='\[\e[1;32m\][\W]\$ \[\e[m\]'
+PS1="\e[0;32m[\u@\h \W]\$ \e[0m""\]\]"
+#PS1='\[\e[1;32m\][\W]\$ \[\e[m\]'
 
 # Aliases for archlinux
 alias sudo='A=`alias` sudo '
