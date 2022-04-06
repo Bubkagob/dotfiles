@@ -23,9 +23,13 @@ alias rm=trash
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-PS1="\e[0;32m[\u@\h \W]\$ \e[0m""\]\]"
-#PS1='\[\e[1;32m\][\W]\$ \[\e[m\]'
-
+#PS1="\e[0;32m[\u@\h \W]\$ \e[0m""\]\]"
+#PS1='\[\e[0;32m\][\u\h \W]\$ \e[0m\]'
+if [ "`id -u`" -eq 0  ]; then
+    PS1="\[\033[m\]|\[\033[1;35m\]\t\[\033[m\]|\[\e[1;31m\]\u\[\e[1;36m\]\[\033[m\]@\[\e[1;36m\]\h\[\033[m\]:\[\e[0m\]\[\e[1;32m\][\W]> \[\e[0m\]"
+else
+    PS1="\[\033[m\]|\[\033[1;35m\]\t\[\033[m\]|\[\e[1m\]\u\[\e[1;36m\]\[\033[m\]@\[\e[1;36m\]\h\[\033[m\]:\[\e[0m\]\[\e[1;32m\][\W]> \[\e[0m\]"
+fi
 # Aliases for archlinux
 alias sudo='A=`alias` sudo '
 alias ls='ls --color=auto'
