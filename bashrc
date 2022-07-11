@@ -85,3 +85,6 @@ PERL5LIB="/home/ivan/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/ivan/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/ivan/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/ivan/perl5"; export PERL_MM_OPT;
+
+# Disable touchpad after key is pressed
+syndaemon -i 0.5 -K -R -d
