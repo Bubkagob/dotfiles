@@ -319,7 +319,7 @@ bindsym $mod+Pause mode "$mode_system"
 # exec --no-startup-id ~/.config/i3/scripts/autodisplay.sh
 exec --no-startup-id xautolock -time 10 -locker 'i3lock -d -c 000000'
 exec --no-startup-id dunst -config ~/.config/i3/dunst/dunstrc
-exec --no-startup-id "gxkb"
+#exec --no-startup-id "gxkb"
 exec --no-startup-id volumeicon
 exec --no-startup-id nm-applet
 #exec --no-startup-id nitrogen --restore
