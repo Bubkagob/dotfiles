@@ -87,4 +87,4 @@ PERL_MB_OPT="--install_base \"/home/ivan/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/ivan/perl5"; export PERL_MM_OPT;
 
 # Disable touchpad after key is pressed
-syndaemon -i 0.5 -K -R -d
+# syndaemon -i 0.5 -K -R -d
